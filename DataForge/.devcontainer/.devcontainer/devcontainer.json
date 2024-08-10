@@ -1,0 +1,17 @@
+{
+    "name": "DataForge Development Container",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "settings": {
+        "python.pythonPath": "/workspace/.venv/bin/python"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localWorkspaceFolder}/src,target=/workspace/src,type=bind"
+    ]
+}
